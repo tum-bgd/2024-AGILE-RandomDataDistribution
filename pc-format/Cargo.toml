@@ -1,0 +1,26 @@
+[package]
+name = "pc-format"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+
+[dependencies]
+ahash = { workspace = true }
+arrow = { workspace = true }
+dashmap = { workspace = true }
+itertools = { workspace = true }
+moka = { workspace = true }
+num-traits = { workspace = true }
+rand = { workspace = true }
+rayon = { workspace = true }
+rstar = { workspace = true }
+serde = { workspace = true }
+tempfile = "3.10.1"
+thiserror = { workspace = true }
+uuid = { workspace = true }
+
+[dev-dependencies]
+nalgebra = { workspace = true }
+rand = { workspace = true }
+simplers_optimization = "0.4.3"

@@ -1,0 +1,27 @@
+[package]
+name = "pc-io"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+
+[dependencies]
+arrow = { workspace = true }
+async-trait = "0.1.77"
+clap = { workspace = true }
+datafusion = { workspace = true }
+futures = "0.3.30"
+las = { version = "0.8.2", features = ["laz"] }
+laz = "0.8.3"
+num-traits = { workspace = true }
+parquet = { workspace = true }
+ply-rs = "0.1.3"
+rand = { workspace = true }
+rayon = { workspace = true }
+rstar = { workspace = true }
+
+pc-format = { path = "../pc-format" }
+
+[dev-dependencies]
+nalgebra = { workspace = true }
+tokio = { workspace = true }

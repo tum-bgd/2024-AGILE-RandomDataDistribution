@@ -1,0 +1,39 @@
+[workspace]
+resolver = "2"
+
+members = [
+    "pc-format",
+    "pc-io",
+    "pc-server",
+]
+
+[workspace.package]
+edition = "2021"
+version = "0.1.0"
+readme = "README.md"
+license = "MPL-2.0"
+
+[workspace.dependencies]
+ahash = "0.8.11"
+anyhow = "1.0.81"
+arrow = { version = "50.0.0", default-features = false, features = ["ipc", "ipc_compression"] }
+clap = { version = "4.5.2", features = ["derive", "env"] }
+dashmap = { version = "5.5.3", features = ["rayon"] }
+datafusion = { version = "36.0.0", default-features = false, features = ["backtrace"]}
+itertools = "0.12.1"
+moka = { version = "0.12.5", features = ["sync"] }
+nalgebra = "0.32.4"
+num-traits = "0.2.18"
+parquet = { version = "50.0.0", default-features = false, features = ["arrow", "zstd"] }
+rand = { version = "0.8.5", features = [ "small_rng" ] }
+rayon = "1.9.0"
+reqwest = { version = "0.11.26", default-features = false, features = ["json", "rustls-tls", "hyper-rustls"] }
+rstar = { version = "0.12.0", features = ["serde"] }
+serde = { version = "1.0.197", features = ["derive"] }
+thiserror = "1.0.58"
+tokio = "1.36.0"
+uuid = { version = "1.7.0", features = ["v4", "fast-rng"] }
+
+[profile.profiling]
+inherits = "release"
+debug = true

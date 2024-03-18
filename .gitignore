@@ -1,0 +1,12 @@
+data/
+
+# Rust
+target/
+
+# Python
+.venv
+
+# Profiling (samply)
+profile.json
+
+PotreeConverter/
